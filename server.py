@@ -11,7 +11,7 @@ class CoreWebVitalsAPI:
     def get_core_web_vitals(self, domains: list) -> dict:
         results = {}
         for domain in domains:
-            metrics = ['largest_contentful_paint', 'first_input_delay', 'cumulative_layout_shift']
+            metrics = ['largest_contentful_paint', 'first_input_delay', 'cumulative_layout_shift', 'first_contentful_paint', 'interaction_to_next_paint', 'experimental_time_to_first_byte']
             params = {
                 'key': self.api_key,
                 'url': f'https://{domain}',
